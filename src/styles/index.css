@@ -1,0 +1,28 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Mobile app optimizations */
+@layer base {
+  /* Ensure full viewport height on mobile */
+  html, body, #root {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Prevent pull-to-refresh on mobile */
+  body {
+    overscroll-behavior-y: none;
+  }
+
+  /* Safe area for mobile devices with notches */
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Hide scrollbar but keep functionality */
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+}
