@@ -2,7 +2,7 @@
 
 // ⚠️ DEVELOPER: Replace this with your actual Gemini API key
 // Get your free API key from: https://makersuite.google.com/app/apikey
-const GEMINI_API_KEY = 'AIzaSyDtspjoOH_xVaK8LroXV6bbMgf7kvOXmAU';
+const GEMINI_API_KEY = '';
 
 export interface AIProductSuggestion {
   betterProducts: string[];
@@ -14,7 +14,7 @@ export async function getProductSuggestions(
   productName: string,
   harmfulIngredients: string[]
 ): Promise<AIProductSuggestion | null> {
-  if (!GEMINI_API_KEY || GEMINI_API_KEY === 'AIzaSyDtspjoOH_xVaK8LroXV6bbMgf7kvOXmAU') {
+  if (!GEMINI_API_KEY || GEMINI_API_KEY === '') {
     // Return mock data if no API key is provided
     return {
       betterProducts: [
